@@ -1,5 +1,5 @@
 import express from "express";
-import { home, about, login, contact, getUsers, getProducts, addUser } from "../controllers/userController.js";
+import { home, about, login, contact, getUsers, getProducts, addUser, addProduct } from "../controllers/userController.js";
 
 const router = express.Router();
 
@@ -16,5 +16,7 @@ router.get('/users', getUsers)
 router.get('/products', getProducts)
 
 router.post('/user', addUser)
+
+router.post('/product', addProduct)
 
 export default router;
